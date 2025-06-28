@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
