@@ -15,7 +15,8 @@ module.exports = async (req, res) => {
     let pvgisUrl = `https://re.jrc.ec.europa.eu/api/seriescalc?lat=${lat}&lon=${lon}&startyear=${year}&endyear=${year}&outputformat=json&browser=1&global=1`;
 
     // Wenn angle + aspect vorhanden sind: erweitere die URL
-    if (angle && aspect) {
+    if (angle !== undefined && aspect !== undefined) {
+
         pvgisUrl += `&angle=${angle}&aspect=${aspect}`;
     }
 
