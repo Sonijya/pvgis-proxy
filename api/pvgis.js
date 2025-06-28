@@ -9,7 +9,8 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: "Fehlende Parameter: lat, lon, year" });
   }
 
-  const url = `https://re.jrc.ec.europa.eu/api/seriescalc?lat=${lat}&lon=${lon}&startyear=${year}&endyear=${year}&outputformat=json&browser=1&global=1&angle=0&aspect=0`;
+  const url = `https://re.jrc.ec.europa.eu/api/seriescalc?lat=${lat}&lon=${lon}&startyear=${year}&endyear=${year}&outputformat=json&browser=1&global=1&angle=0&aspect=0&usehourly=1`;
+
 
   try {
     const response = await fetch(url);
